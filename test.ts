@@ -1,4 +1,4 @@
-import { Logger } from "https://deno.land/x/waterlog/mod.ts";
+import { Logger } from "./mod.ts";
 
 // Create a new Logger object, with a tag of 'mytag' and debug messages
 var logger = new Logger("mytag", true);
