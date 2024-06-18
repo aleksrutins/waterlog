@@ -1,4 +1,4 @@
-import { dim, cyan, red, yellow } from "https://deno.land/std@0.91.0/fmt/colors.ts";
+import { dim, cyan, red, yellow } from "@std/fmt/colors";
 
 export class Logger {
     /**
@@ -6,10 +6,11 @@ export class Logger {
      * @param tag Tag to use for logging (e.g. class name, routine, etc.)
      * @param isDebug Whether to print debug messages.
      */
-    constructor(private tag: string, public isDebug: boolean = false) {
+    constructor(
+        private tag: string,
+        public isDebug: boolean = false,
+    ) {}
 
-    }
-    
     /**
      * Prints an info message.
      * @param msg Message to print
@@ -39,6 +40,7 @@ export class Logger {
      * @param msg Message to print
      */
     debug(msg: string) {
-        if(this.isDebug == true) console.log(`${dim(cyan(`[${this.tag}:debug]`))} ${msg}`);
+        if (this.isDebug == true)
+            console.log(`${dim(cyan(`[${this.tag}:debug]`))} ${msg}`);
     }
 }
