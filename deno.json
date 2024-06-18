@@ -1,5 +1,8 @@
 {
-  "imports": {
-    "@std/fmt": "jsr:@std/fmt@^0.225.4"
-  }
+    "name": "@asr/waterlog",
+    "version": "1.1.0",
+    "imports": {
+        "@std/fmt": "jsr:@std/fmt@^0.225.4"
+    },
+    "exports": "./mod.ts"
 }
